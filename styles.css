@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #1a1a1a;
+  background-color: #f7f7fb;
+  line-height: 1.6;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  border: 2px solid #1f4d8f;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+}
+
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #e5e5ee;
+  padding: 0.75rem 1rem;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+nav {
+  padding: 0.5rem 1rem;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.nav-list a {
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d7d7e4;
+  background: #fafafe;
+  color: inherit;
+}
+
+.nav-list a[aria-current="page"] {
+  border-color: #1f4d8f;
+}
+
+.nav-list a:focus-visible {
+  outline: 2px solid #1f4d8f;
+  outline-offset: 2px;
+}
+
+.container {
+  max-width: 920px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.2rem; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+figure { margin: 1rem 0; }
+figcaption { font-size: 0.9rem; color: #444; }
+
+.site-footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+  color: #555;
+  border-top: 1px solid #e5e5ee;
+  background: #fff;
+}
+
+.layout-alt {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 720px) {
+  .layout-alt {
+    grid-template-columns: 1.25fr 1fr;
+    align-items: start;
+  }
+}
